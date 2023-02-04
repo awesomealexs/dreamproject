@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+//    redirect('patent_request');
     return view('welcome');
 });
+
+Route::get('/patent_request', [\App\Http\Controllers\PatentRequestController::class, 'index'])->name('patent_request');
+Route::get('/test', [\App\Http\Controllers\TestController::class, 'index']);

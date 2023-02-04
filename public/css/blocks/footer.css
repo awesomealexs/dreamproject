@@ -1,0 +1,22 @@
+.footer {
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer__wrapper {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.footer__copyright a {
+    font-weight: 400;
+    text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+.title {
+    color: var(--black);
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.title--h2 {
+    font-size: 26 px;
+    margin-bottom: 40px;
+}

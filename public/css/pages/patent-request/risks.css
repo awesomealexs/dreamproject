@@ -1,0 +1,22 @@
+.risks__items > div {
+    display: flex;
+    gap: 25px;
+}
+
+.risks__items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.risks__inner {
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 45px;
+}
+
+.risks [data-action='add'] {
+    position: absolute;
+    bottom: -2px;
+    right: -88px;
+}

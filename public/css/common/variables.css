@@ -1,0 +1,10 @@
+:root {
+    --main-font: "Rubik", "Arial", sans-serif;
+
+    --white: #ffffff;
+    --black: #111111;
+    --accent: #E95380;
+    --outline: #e0e0e0;
+    --outline-bold: #b6b6b6;
+    --trans: 0.175s ease-in-out;
+}
