@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "common/variables.css";
+@import "common/reset.css";
+@import "common/typography.css";
+@import "common/utils.css";
+
+/*COMPONENTS*/
+@import "components/form.css";
+@import "components/button.css";
+@import "blocks/header.css";
+@import "blocks/footer.css";
+
+/*PAGES*/
+@import "pages/patent-request/main.css";

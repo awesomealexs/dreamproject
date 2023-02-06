@@ -16,6 +16,7 @@
 }
 
 .risks [data-action='add'] {
+    display: grid;
     position: absolute;
     bottom: -2px;
     right: -88px;

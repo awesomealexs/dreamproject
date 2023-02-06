@@ -6,7 +6,7 @@
             Создать заявку
         </h2>
 
-        <form class="form" action="#" methos="POST" autocomplete="off" data-form="patent-request">
+        <form class="form" action="{{route('save_patent_request')}}" method="POST" autocomplete="off" data-form="patent-request">
             <fieldset>
                 <legend>
                     Общая информация
@@ -37,17 +37,25 @@
                         <span>Бренд:</span>
                         <input class="form__input-text" type="text" name="request_brand">
                     </label>
-
-                    <label class="form__text-wrapper">
-                        <span>Дата подачи:</span>
-                        <input class="form__input-text" type="date" name="request_date">
-                    </label>
-
-                    <label class="form__text-wrapper">
-                        <span>Номер заявки:</span>
-                        <input class="form__input-text" type="text" name="request_number">
-                    </label>
                 </div>
+
+                <fieldset class="mt-8">
+                    <legend>
+                        Инфрмация о заявке
+                    </legend>
+
+                    <div class="flex justify-between items-center" style="justify-content: space-between">
+                        <label class="form__text-wrapper items-center">
+                            <span>Номер заявки:</span>
+                            <input class="form__input-text" type="text" name="request_number">
+                        </label>
+
+                        <label class="form__text-wrapper items-center">
+                            <span>Дата подачи:</span>
+                            <input class="form__input-text" type="date" name="request_date">
+                        </label>
+                    </div>
+                </fieldset>
             </fieldset>
 
             <fieldset>
