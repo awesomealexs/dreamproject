@@ -11,15 +11,16 @@ class PatentRequest extends Model
 
     protected $fillable = [
         'company_id',
-        'client_name',
+//        'client_name',
         'INN',
-        'legal_address',
-        'ceo_name',
-        'date_of_application',
-        'application_number',
-        'descriptiveness_text',
-        'falsity_text',
-        'perspective_forecast',
+//        'legal_address',
+//        'ceo_name',
+//        'date_of_application',
+//        'application_number',
+//        'descriptiveness_text',
+//        'falsity_text',
+//        'perspective_forecast',
     ];
+
 
 }

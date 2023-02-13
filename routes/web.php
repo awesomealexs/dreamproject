@@ -21,4 +21,8 @@ Route::get('/', function () {
 
 Route::get('/patent_request', [\App\Http\Controllers\PatentRequestController::class, 'index'])->name('patent_request');
 Route::post('/patent_request', [\App\Http\Controllers\PatentRequestController::class, 'save'])->name('save_patent_request');
+Route::get('/main_table', [\App\Http\Controllers\MainTableController::class, 'index'])->name('main_table');
+Route::get('/test123', function () {
+    return view('pages.test');
+})->name('test');
 Route::get('/test', [\App\Http\Controllers\TestController::class, 'index']);

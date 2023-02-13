@@ -5,14 +5,14 @@
         <nav class="header__nav">
             <ul>
                 <li>
-                    <a href="#">
-                        Страница
+                    <a href="{{route('main_table')}}">
+                        main table
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        Страница
+                    <a href="{{route('patent_request')}}">
+                        patent request
                     </a>
                 </li>
 

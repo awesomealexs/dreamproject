@@ -24,7 +24,15 @@ class PatentRequestForm extends FormRequest
     public function rules()
     {
         return [
-            //
+            'INN' => ['required', 'numeric', 'min:2'],
+            'company_id' => ['required'],
         ];
+    }
+
+    protected function prepareForValidation(){
+
+        $this->merge([
+            'company_id' => 1
+        ]);
     }
 }

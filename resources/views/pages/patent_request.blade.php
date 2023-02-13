@@ -6,6 +6,10 @@
             Создать заявку
         </h2>
 
+{{--        @isset('zaebis')--}}
+
+{{--            @end--}}
+
         <form class="form" action="{{route('save_patent_request')}}" method="POST" autocomplete="off" data-form="patent-request">
             <fieldset>
                 <legend>
@@ -14,13 +18,18 @@
 
                 <div class="form__fields-wrapper form__fields-wrapper--grid">
                     <label class="form__text-wrapper">
-                        <span>Название</span>
-                        <input class="form__input-text" type="text" name="patent_name">
+                        <span>Товарный знак</span>
+                        <input class="form__input-text" type="text" name="trade_mark">
+                    </label>
+
+                    <label class="form__text-wrapper">
+                        <span>Название организации</span>
+                        <input class="form__input-text" type="text" name="organisation_name">
                     </label>
 
                     <label class="form__text-wrapper">
                         <span>ИНН:<sup>*</sup></span>
-                        <input class="form__input-text" type="text" name="patent_ITN" required>
+                        <input class="form__input-text" type="text" name="INN" required>
                     </label>
 
                     <label class="form__text-wrapper">
@@ -38,24 +47,24 @@
                         <input class="form__input-text" type="text" name="request_brand">
                     </label>
                 </div>
+            </fieldset>
 
-                <fieldset class="mt-8">
-                    <legend>
-                        Инфрмация о заявке
-                    </legend>
+            <fieldset class="mt-8">
+                <legend>
+                    Инфрмация о заявке
+                </legend>
 
-                    <div class="flex justify-between items-center" style="justify-content: space-between">
-                        <label class="form__text-wrapper items-center">
-                            <span>Номер заявки:</span>
-                            <input class="form__input-text" type="text" name="request_number">
-                        </label>
+                <div class="flex justify-between items-center" style="justify-content: space-between">
+                    <label class="form__text-wrapper items-center">
+                        <span>Номер заявки:</span>
+                        <input class="form__input-text" type="text" name="request_number">
+                    </label>
 
-                        <label class="form__text-wrapper items-center">
-                            <span>Дата подачи:</span>
-                            <input class="form__input-text" type="date" name="request_date">
-                        </label>
-                    </div>
-                </fieldset>
+                    <label class="form__text-wrapper items-center">
+                        <span>Дата подачи:</span>
+                        <input class="form__input-text" type="date" name="request_date">
+                    </label>
+                </div>
             </fieldset>
 
             <fieldset>
@@ -106,16 +115,16 @@
                 </legend>
 
                 <div class="progress">
-                    <input class="visually-hidden" type="radio" class="radio" name="perspective" value="25" id="twenty_five" checked>
+                    <input class="visually-hidden" type="radio" name="perspective" value="25" id="twenty_five" checked>
                     <label for="twenty_five" class="progress__label">25%</label>
 
-                    <input class="visually-hidden" type="radio" class="radio" name="perspective" value="50" id="fifty">
+                    <input class="visually-hidden" type="radio" name="perspective" value="50" id="fifty">
                     <label for="fifty" class="progress__label">50%</label>
 
-                    <input class="visually-hidden" type="radio" class="radio" name="perspective" value="75" id="seventy_five">
+                    <input class="visually-hidden" type="radio" name="perspective" value="75" id="seventy_five">
                     <label for="seventy_five" class="progress__label">75%</label>
 
-                    <input class="visually-hidden" type="radio" class="radio" name="perspective" value="95" id="ninety_five">
+                    <input class="visually-hidden" type="radio" name="perspective" value="95" id="ninety_five">
                     <label for="ninety_five" class="progress__label">95%</label>
 
                     <div class="progress__bar">
@@ -130,30 +139,12 @@
                 </legend>
 
                 <div class="form__checkboxes">
+                    @foreach($tasks as $task)
                     <label class="form__checkbox">
-                        <input class="visually-hidden" id="task_1" type="checkbox" name="task[]">
-                        <span>Задачка 1</span>
+                        <input class="visually-hidden" id="task_{{$task->id}}" type="checkbox" name="task[{{$task->id}}]">
+                        <span>{{$task->name}}</span>
                     </label>
-
-                    <label class="form__checkbox">
-                        <input class="visually-hidden" id="task_2" type="checkbox" name="task[]">
-                        <span>Задачка 2</span>
-                    </label>
-
-                    <label class="form__checkbox">
-                        <input class="visually-hidden" id="task_3" type="checkbox" name="task[]">
-                        <span>Задачка 3</span>
-                    </label>
-
-                    <label class="form__checkbox">
-                        <input class="visually-hidden" id="task_4" type="checkbox" name="task[]">
-                        <span>Задачка 4</span>
-                    </label>
-
-                    <label class="form__checkbox">
-                        <input class="visually-hidden" type="checkbox" name="task[]">
-                        <span>Задачка 5</span>
-                    </label>
+                    @endforeach
                 </div>
             </fieldset>
 
