@@ -106,12 +106,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
-
-.block {
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-
 textarea {
     resize: none;
 }
@@ -961,6 +955,9 @@ video {
 .fixed {
   position: fixed;
 }
+.absolute {
+  position: absolute;
+}
 .relative {
   position: relative;
 }
@@ -969,6 +966,12 @@ video {
 }
 .right-0 {
   right: 0px;
+}
+.top-1\/2 {
+  top: 50%;
+}
+.right-2 {
+  right: 0.5rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -1000,6 +1003,24 @@ video {
 }
 .-mt-px {
   margin-top: -1px;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .block {
   display: block;
@@ -1040,14 +1061,30 @@ video {
 .w-full {
   width: 100%;
 }
+.w-2\/4 {
+  width: 50%;
+}
+.w-1\/5 {
+  width: 20%;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
 .max-w-screen-xl {
   max-width: 1280px;
 }
+.grow {
+  flex-grow: 1;
+}
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .items-center {
   align-items: center;
@@ -1058,18 +1095,62 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.justify-items-center {
+  justify-items: center;
+}
+.gap-4 {
+  gap: 1rem;
+}
 .overflow-hidden {
   overflow: hidden;
 }
 .rounded-lg {
   border-radius: 0.5rem;
 }
+.rounded {
+  border-radius: 0.25rem;
+}
+.border {
+  border-width: 1px;
+}
 .border-t {
   border-top-width: 1px;
+}
+.border-r {
+  border-right-width: 1px;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-l {
+  border-left-width: 1px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+.border-zinc-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 212 216 / var(--tw-border-opacity));
+}
+.border-b-zinc-700 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(63 63 70 / var(--tw-border-opacity));
+}
+.border-b-zinc-500 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(113 113 122 / var(--tw-border-opacity));
+}
+.border-b-zinc-400 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(161 161 170 / var(--tw-border-opacity));
+}
+.border-b-zinc-100 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(244 244 245 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1078,6 +1159,18 @@ video {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-zinc-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+}
+.bg-zinc-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+}
+.bg-zinc-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
 }
 .p-6 {
   padding: 1.5rem;
@@ -1090,9 +1183,13 @@ video {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1108,11 +1205,21 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-semibold {
   font-weight: 600;
 }
+.font-medium {
+  font-weight: 500;
+}
 .leading-7 {
   line-height: 1.75rem;
+}
+.leading-8 {
+  line-height: 2rem;
 }
 .text-gray-200 {
   --tw-text-opacity: 1;
@@ -1141,6 +1248,10 @@ video {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;

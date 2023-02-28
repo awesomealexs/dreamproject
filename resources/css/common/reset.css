@@ -92,12 +92,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
-
-.block {
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-
 textarea {
     resize: none;
 }

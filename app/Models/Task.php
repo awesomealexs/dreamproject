@@ -12,4 +12,9 @@ class Task extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function patentRequests(){
+
+        return $this->belongsToMany(PatentRequest::class, 'task_patent_requests');
+    }
 }

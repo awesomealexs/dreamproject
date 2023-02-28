@@ -1,7 +1,8 @@
+@config "./../../tailwind.config.js";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import "common/variables.css";
 @import "common/reset.css";
 @import "common/typography.css";

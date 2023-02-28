@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header mb-12">
     <div class="wrapper header__wrapper">
         <img src="/storage/images/logo.svg" width="115" height="68" alt="Logo">
 

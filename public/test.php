@@ -1,11 +1,12 @@
 <?php
 
 
-$array = [
-    'awd' => 123,
-    'awd1' => 123,
-    'awd11' => 123,
-    'awd31' => 123,
+$a = [
+    'a' =>123,
+    'b' =>123,
+    'ca' =>123,
+    'af' =>123,
 ];
 
-echo json_encode($array);
+
+echo json_encode($a);

@@ -21,9 +21,13 @@ class PatentRequestController extends Controller
     }
 
     public function save(Request $request, PatentRequestForm $form){
+        $patentRequestCreation = PatentRequest::create($form->validated());
 
-        dd($request);
-        $patentRequest = PatentRequest::create($form->validated());
+        $patentRequest = PatentRequest::find($patentRequestCreation->id);
+
+        $choosenTasks = array_keys($request->input('task'));
+
+        $patentRequest->tasks()->attach($choosenTasks);
 
         return redirect('patent_request');
     }

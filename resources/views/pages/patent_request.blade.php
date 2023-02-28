@@ -6,10 +6,15 @@
             Создать заявку
         </h2>
 
-{{--        @isset('zaebis')--}}
-
-{{--            @end--}}
-
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form class="form" action="{{route('save_patent_request')}}" method="POST" autocomplete="off" data-form="patent-request">
             <fieldset>
                 <legend>
@@ -24,7 +29,7 @@
 
                     <label class="form__text-wrapper">
                         <span>Название организации</span>
-                        <input class="form__input-text" type="text" name="organisation_name">
+                        <input class="form__input-text" type="text" name="client_name">
                     </label>
 
                     <label class="form__text-wrapper">
@@ -39,7 +44,7 @@
 
                     <label class="form__text-wrapper">
                         <span>Ген. директор:</span>
-                        <input class="form__input-text" type="text" name="patent_ceo" placeholder="ФИО">
+                        <input class="form__input-text" type="text" name="ceo_name" placeholder="ФИО">
                     </label>
 
                     <label class="form__text-wrapper">
@@ -57,12 +62,12 @@
                 <div class="flex justify-between items-center" style="justify-content: space-between">
                     <label class="form__text-wrapper items-center">
                         <span>Номер заявки:</span>
-                        <input class="form__input-text" type="text" name="request_number">
+                        <input class="form__input-text" type="text" name="application_number">
                     </label>
 
                     <label class="form__text-wrapper items-center">
                         <span>Дата подачи:</span>
-                        <input class="form__input-text" type="date" name="request_date">
+                        <input class="form__input-text" type="date" name="date_of_application">
                     </label>
                 </div>
             </fieldset>
@@ -98,13 +103,12 @@
 
                     <label class="form__text-wrapper">
                         <span>Описание рисков:</span>
-                        <textarea class="form__textarea" name="risks_description" placeholder="Общее заключение по рискам"></textarea>
+                        <textarea class="form__textarea" name="descriptiveness_text" placeholder="Общее заключение по рискам"></textarea>
                     </label>
 
                     <label class="form__text-wrapper">
                         <span>Ложность:</span>
-                        {{--я хз как там ложность будет за неймы сразу прости *))--}}
-                        <textarea class="form__textarea" name="risks_fault" placeholder="Опишите ложность рисков"></textarea>
+                        <textarea class="form__textarea" name="falsity_text" placeholder="Опишите ложность рисков"></textarea>
                     </label>
                 </div>
             </fieldset>
@@ -115,16 +119,16 @@
                 </legend>
 
                 <div class="progress">
-                    <input class="visually-hidden" type="radio" name="perspective" value="25" id="twenty_five" checked>
+                    <input class="visually-hidden" type="radio" name="perspective_forecast" value="25" id="twenty_five" checked>
                     <label for="twenty_five" class="progress__label">25%</label>
 
-                    <input class="visually-hidden" type="radio" name="perspective" value="50" id="fifty">
+                    <input class="visually-hidden" type="radio" name="perspective_forecast" value="50" id="fifty">
                     <label for="fifty" class="progress__label">50%</label>
 
-                    <input class="visually-hidden" type="radio" name="perspective" value="75" id="seventy_five">
+                    <input class="visually-hidden" type="radio" name="perspective_forecast" value="75" id="seventy_five">
                     <label for="seventy_five" class="progress__label">75%</label>
 
-                    <input class="visually-hidden" type="radio" name="perspective" value="95" id="ninety_five">
+                    <input class="visually-hidden" type="radio" name="perspective_forecast" value="95" id="ninety_five">
                     <label for="ninety_five" class="progress__label">95%</label>
 
                     <div class="progress__bar">

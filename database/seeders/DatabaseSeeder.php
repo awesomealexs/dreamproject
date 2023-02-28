@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Company;
 use Illuminate\Database\Seeder;
 use App\Models\Task;
 
@@ -25,5 +26,7 @@ class DatabaseSeeder extends Seeder
         Task::factory(1)->create(['name' => 'Подготовить ответ на запрос Роспатента']);
         Task::factory(1)->create(['name' => 'Оплатить госпошлину за регистрацию знака и получение свидетельства']);
         Task::factory(1)->create(['name' => 'Получить свидетельство на товарный знак']);
+
+        Company::factory(1)->create(['name' => 'компания 1']);
     }
 }
